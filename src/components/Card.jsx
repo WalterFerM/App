@@ -6,12 +6,9 @@ import PropTypes from 'prop-types';
 
 export default function Card({max, min, name, img, onClose}) {
 
-  function handleOnClose () {
-    if(typeof onClose === 'function') onClose();
-  }
   return (
   <div>
-    <button onClick={handleOnClose}>X</button>
+    <button onClick={onClose}>X</button>
     <h1>{name}</h1>
     <CardTemp label="Min" value={min} />
     <CardTemp label="Max" value={max} />
