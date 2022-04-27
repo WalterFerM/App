@@ -8,7 +8,7 @@ export default function Card({max, min, name, img, onClose}) {
   }
   return (
   <div>
-    <button onClose={handleOnClose}>X</button>
+    <button onClick={handleOnClose}>X</button>
     <h1>{name}</h1>
     <CardTemp label="Min" value={min} />
     <CardTemp label="Max" value={max} />
