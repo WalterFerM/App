@@ -1,0 +1,39 @@
+.Card {
+    border: 1px solid black;
+    
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr;
+
+    position: relative;
+}
+
+.cityName {
+    grid-column: 1 / span 3;
+}
+
+.closeBtn {
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+    font-size: 1.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.1rem;
+
+    border-radius: 9999px;
+    border: 1px solid var(--colorBtn-Principal);
+    background-color: var(--colorBtn-Principal);
+    color: var(--colorBtn-Secondary);
+
+    transition: 0.25s;
+
+}
+
+.closeBtn:hover {
+    color: var(--colorBtn-Principal);
+    background-color: var(--colorBtn-Secondary);
+}
