@@ -1,0 +1,7 @@
+.Cards {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-flow: dense;
+    grid-auto-rows: 9rem;
+    gap: 0.5rem;
+}
