@@ -5,4 +5,4 @@ export default function CardTemp ({label, value}) {
         <span>{value}</span>
     </div>
     )
-}
+};

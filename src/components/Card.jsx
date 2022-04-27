@@ -1,5 +1,5 @@
 import React from 'react';
-import CardTemp from './CardTemp'
+import CardTemp from './CardTemp';
 
 export default function Card({max, min, name, img, onClose}) {
 
@@ -16,12 +16,3 @@ export default function Card({max, min, name, img, onClose}) {
   </div>
   )
 };
-
-function CardTemp ({label, value}) {
-  return (
-    <div>
-      <label>{label}</label>
-      <span>{value}</span>
-    </div>
-  )
-}
