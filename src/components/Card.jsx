@@ -1,4 +1,5 @@
 import React from 'react';
+import CardTemp from './CardTemp'
 
 export default function Card({max, min, name, img, onClose}) {
 
@@ -9,15 +10,18 @@ export default function Card({max, min, name, img, onClose}) {
   <div>
     <button onClose={handleOnClose}>X</button>
     <h1>{name}</h1>
-    <div>
-      <label htmlFor="min">Min</label>
-      <span id="min" >{min}</span>
-    </div>
-    <div>
-      <label htmlFor="max">Max</label>
-      <span id="max">{max}</span>
-    </div>
+    <CardTemp label="Min" value={min} />
+    <CardTemp label="Max" value={max} />
     <img src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt="weather icon" />
   </div>
   )
 };
+
+function CardTemp ({label, value}) {
+  return (
+    <div>
+      <label>{label}</label>
+      <span>{value}</span>
+    </div>
+  )
+}
