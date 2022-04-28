@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import './App.css';
-import Card from './components/Card.jsx';
+// import Card from './components/Card.jsx';
 import Cards from './components/Cards.jsx';
 import SearchBar from './components/SearchBar.jsx';
-import data, { Cairns } from './data.js';
+// import data, { Cairns } from './data.js';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -55,10 +55,10 @@ function App() {
     <div className="App">
       <div>
         <SearchBar
-          onSearch={(ciudad) => alert(ciudad)}
+          onSearch={onSearch}
         />
       </div>
-      <div>
+      {/* <div>
         <Card
           max={Cairns.main.temp_max}
           min={Cairns.main.temp_min}
@@ -66,12 +66,10 @@ function App() {
           img={Cairns.weather[0].icon}
           onClose={() => alert(Cairns.name)}
         />
-      </div>
+      </div> */}
       <hr />
       <div>
-        <Cards
-          cities={data}
-        />
+        <Cards cities={cities} onRemove={handleRemoveCity} />
       </div>
       <hr />
     </div>
